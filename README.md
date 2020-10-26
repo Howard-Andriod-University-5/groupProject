@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+# COVID-19 STATS
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+This mobile app provides up-t--date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
