@@ -11,7 +11,7 @@ Original App Design Project
 
 ## Overview
 ### Description
-This mobile app provides up-t--date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines. In addition, user's can keep a "COVID Journal" to record their symptons/treatment, quarantine progress and keep track of places/people they visited.
+This mobile app provides up-to-date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines. In addition, user's can keep a "COVID Journal" to record their symptons/treatment, quarantine progress and keep track of places/people they visited.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
