@@ -87,8 +87,8 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 ## Wireframes
 ### [BONUS] Digital Wireframes & Mockups
 <img src="wireframes.png" width=600>
-<img src="Wireframe.jpg" width=300>
-<img src="wirframe_login.jpg" width=300>
+<img src="Wireframe.jpg" width=100>
+<img src="wirframe_login.jpg" width=100>
 ### [BONUS] Interactive Prototype
 
 ## Schema 
