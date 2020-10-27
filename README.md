@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+Original App Design Project
 ===
 
 # COVID-19 STATS
@@ -11,16 +11,25 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-This mobile app provides up-t--date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines.
+This mobile app provides up-t--date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines. In addition, user's can keep a "COVID Journal" to record their symptons/treatment, quarantine progress and keep track of places/people they visited.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
+- **Category:** Education/Public Information
+- **Mobile:** 
+    * Information will be available offline (real-time)
+    * Can Upload audio entries into COVID Journal
+    * Can enable location to instantly provide relevant statistics
 - **Story:**
+    * It provides users with an personal way to understand the current state of the COVID 19 pandemic. 
 - **Market:**
+    * The app is made for users who are generally concerned about COVID stats and want quick information.
+    * The app specifically caters to users were potentially exposed to COVID-19 because it provides a private platform to track their health.
 - **Habit:**
+    * The passive user can easily check COVID-19 statistics at least once a day.
+    * The active user who is concerned about being exposed to COVID can create a mobile journal.
 - **Scope:**
+    * The project's MVP can be completed in the timeline of the course. However, the design of the app (in terms of how data is displayed) will take considerable time and may not be finished in the time period.
 
 ## Product Spec
 
@@ -28,43 +37,66 @@ This mobile app provides up-t--date information about the COVID-19 pandemic usin
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can view COVID-19 death and infection rates in the United States
+* User can view COVID-19 death and infection rates by state in the United States
+* User can view updated safety information
+* User can login and create written and audio entries in a personal COVID Journal
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can use their location to automatically view relevant COVID-19 stats
+* User can get relevant information about testing centers near them (directions, phone number, website, etc.)
+* User can download Journal in a pdf file to print or share
+* User can save locations that they are interested in
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Search
+   * User can search for locations to see stats
+* Stats Stream 
+   * User can view list of stats for relevant locations
+* Detail 
+   * User can view more stats from a specific location
+* Testing Stream
+   * User can view testing sites near them
+   * 
+* Login 
+   * User can login to access Covid Journal
+* Journal Stream
+   * User can view all the Journal entries they have made
+* Entry Creation 
+   * User can edit text or add audio to post a journal entry
+
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Location Stats
+* COVID-19 Journal
+* Testing Sites
+* Logout 
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login
+   * => Location Stream
+* Location Stats Stream
+   * => Location Search
+       * => Location Stats Stream
+           * => Location Detail
+* COVID-19 Journal Stream
+   * => Entry Creation
+* Testing Sites Stream
+   * => Testing Site Detail
 
 ## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
 ### [BONUS] Digital Wireframes & Mockups
-![App Wireframes](wireframes.png)
+
+### [BONUS] Interactive Prototype
 
 ## Schema 
 [This section will be completed in Unit 9]
