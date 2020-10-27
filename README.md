@@ -57,9 +57,6 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
    * User can view list of stats for relevant locations
 * Detail 
    * User can view more stats from a specific location
-* Testing Stream
-   * User can view testing sites near them
-   * 
 * Login 
    * User can login to access Covid Journal
 * Journal Stream
@@ -74,7 +71,6 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 
 * Location Stats
 * COVID-19 Journal
-* Testing Sites
 * Logout 
 
 **Flow Navigation** (Screen to Screen)
@@ -87,15 +83,12 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
            * => Location Detail
 * COVID-19 Journal Stream
    * => Entry Creation
-* Testing Sites Stream
-   * => Testing Site Detail
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="wireframes.png" width=600>
-
 ### [BONUS] Digital Wireframes & Mockups
-
+<img src="wireframes.png" width=600>
+<img src="Wireframe.jpg" width=300>
+<img src="wirframe_login.jpg" width=300>
 ### [BONUS] Interactive Prototype
 
 ## Schema 
