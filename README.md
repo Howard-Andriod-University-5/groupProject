@@ -94,7 +94,15 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| property     | Type            | Description                                     |
+|--------------|-----------------|-------------------------------------------------|
+| objectId     | String          | Unique id for the user login                    |
+| image        | File            |    Images of   covid cities/statistics          |
+| createdAt    | DateTime        | date when covid post is created (default field) |
+| updatedAt    | DateTime        | date when covid post is updated (default field) |
+| journalEntry | String          | Entry by author                                 |
+| author       | Pointer to User | entry author                                    |
+| statistics   | String          | Statistics for each city                        |
 ### Networking
 * Login Screen
     * (Create/POST) Sign up and create a new user
