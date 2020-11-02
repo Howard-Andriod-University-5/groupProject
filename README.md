@@ -96,6 +96,63 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* Login Screen
+    * (Create/POST) Sign up and create a new user
+        ```swift
+        ParseObject newUser = new    ParseObject("User");
+        newUser.put("username", "Bob");
+        newUser.put("password", "Day 5");
+        newUser.saveInBackground();
+        ```
+* Location Stats Screen
+    * (Read/GET) Display COVID-19 Stats 
+        ```swift
+             let query = PFQuery(className:"Stats")
+             query.whereKey("locations", equalTo: states)
+             query.order(byDescending: "createdAt")
+             query.findObjectsInBackground { (entries: [PFObject]?, error: Error?) in
+                if let error = error { 
+                   print(error.localizedDescription)
+                } else if let stats = stats {
+                   print("Successfully retrieved \(posts.count) posts.")
+               // TODO: Do something with stats for specific locations...
+                }
+             }
+* Journal Stream Screen
+    * (Read/GET) Displays all the previous entries that have been made from the logged in user
+        ```swift
+             let query = PFQuery(className:"Entry")
+             query.whereKey("author", equalTo: currentUser)
+             query.order(byDescending: "createdAt")
+             query.findObjectsInBackground { (entries: [PFObject]?, error: Error?) in
+                if let error = error { 
+                   print(error.localizedDescription)
+                } else if let entries = entries {
+                   print("Successfully retrieved \(posts.count) posts.")
+               // TODO: Do something with entries...
+                }
+             }
+             ```
+    * (Delete) Remove existing entry
+        ```swift
+            jEntry.remove("playerName");
+            jEntry.saveInBackground();
+        ```
+* Entry Creation
+    * (Create/POST) Create a new entry to add to the stream 
+        ```swift
+        ParseObject jEntry = new ParseObject("JournalEntry");
+        jEntry.put("date", 1337);
+        jEntry.put("title", "Day 5");
+        jEntry.put("text", content);
+        jEntry.saveInBackground();
+        ```
+Base URL: https://api.covidtracking.com
+
+
+| HTTP Verb | Endpoint | Description |
+| -------- | -------- | -------- |
+| GET    | /v1/us/current.json | Current COVID-19 Statistics for the US as a whole     |
+| GET    | /v1/states/current.json | Current COVID-19 Statistics for all US states     |
+| GET    | /v1/states/?state=state/current.json | Current COVID-19 Statistics for a specific state     |
+| GET    | /v1/states/?state=state/info.json | Information about a specific state's response resources     |
