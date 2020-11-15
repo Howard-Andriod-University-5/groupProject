@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">COVID19Stats</string>
+    <string name="app_name">Parstagram</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">LOGOUT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
