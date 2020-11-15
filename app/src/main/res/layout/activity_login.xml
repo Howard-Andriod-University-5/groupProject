@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTintMode="src_over"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:fadingEdge="horizontal"
+        android:gravity="start|top"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:singleLine="true"
+        android:textColorLink="#F2F2F2"
+        android:textCursorDrawable="@android:drawable/ic_menu_compass" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:fadingEdge="horizontal"
+        android:gravity="start|top"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColorLink="#493C3C"
+        android:textCursorDrawable="@android:drawable/ic_menu_compass" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#FFFAE3"
+        android:text="@string/login"
+        android:textColor="#8F745C"
+        android:textSize="20sp" />
+
+</LinearLayout>

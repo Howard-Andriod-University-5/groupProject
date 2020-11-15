@@ -1,98 +1,166 @@
-# Project 3 - *Parstagram*
+Original App Design Project
+===
 
-**Parstagram** is a photo sharing app similar to Instagram but using Parse as its backend.
+# COVID-19 STATS
 
-Time spent: **8** hours spent in total
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
 
-## User Stories Part 2
+## Overview
+### Description
+This mobile app provides up-to-date information about the COVID-19 pandemic using Google COVID-19 statistics data. The user will be able to look up information for specific locations such as testing sites, current infection and death rates, as well as prevention guidelines. In addition, user's can keep a "COVID Journal" to record their symptons/treatment, quarantine progress and keep track of places/people they visited.
 
-The following **required** functionality is completed:
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:** Education/Public Information
+- **Mobile:** 
+    * Information will be available offline (real-time)
+    * Can Upload audio entries into COVID Journal
+    * Can enable location to instantly provide relevant statistics
+- **Story:**
+    * It provides users with an personal way to understand the current state of the COVID 19 pandemic. 
+- **Market:**
+    * The app is made for users who are generally concerned about COVID stats and want quick information.
+    * The app specifically caters to users were potentially exposed to COVID-19 because it provides a private platform to track their health.
+- **Habit:**
+    * The passive user can easily check COVID-19 statistics at least once a day.
+    * The active user who is concerned about being exposed to COVID can create a mobile journal.
+- **Scope:**
+    * The project's MVP can be completed in the timeline of the course. However, the design of the app (in terms of how data is displayed) will take considerable time and may not be finished in the time period.
 
-- [x] User can view the last 20 posts submitted to "Instagram".
-- [x] The user should switch between different tabs - viewing all posts (feed view), compose (capture photos form camera) and profile tabs (posts made) using fragments and a Bottom Navigation View. (2 points)
-- [x] User can pull to refresh the last 20 posts submitted to "Instagram".
+## Product Spec
 
-The following **optional** features are implemented:
+### 1. User Stories (Required and Optional)
 
-- [ ] User sees app icon in home screen and styled bottom navigation view
-- [ ] Style the feed to look like the real Instagram feed.
-- [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
-- [ ] Show the username and creation time for each post.
-- [ ] User can tap a post to view post details, including timestamp and caption.
-- [ ] User Profiles
-      - [ ] Allow the logged in user to add a profile photo
-      - [ ] Display the profile photo with each post
-      - [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts 
-- [ ] User can comment on a post and see all comments for each post in the post details screen.
-- [ ] User can like a post and see number of likes for each post in the post details screen.
+**Required Must-have Stories**
 
-The following **additional** features are implemented:
+* User can view COVID-19 death and infection rates in the United States
+* User can view COVID-19 death and infection rates by state in the United States
+* User can view updated safety information
+* User can login and create written and audio entries in a personal COVID Journal
 
-- [ ] List anything else that you can get done to improve the app functionality!
+**Optional Nice-to-have Stories**
 
-## Video Walkthrough
+* User can use their location to automatically view relevant COVID-19 stats
+* User can get relevant information about testing centers near them (directions, phone number, website, etc.)
+* User can download Journal in a pdf file to print or share
+* User can save locations that they are interested in
 
-Here's a walkthrough of implemented user stories:
+### 2. Screen Archetypes
 
-<img src='walkthrough_insta(1).gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-It was a good review and fragments are cool!
-
-
-## User Stories Part 1
-
-The following **required** functionality is completed:
-
-- [x] User can sign up to create a new account using Parse authentication.
-- [x] User can log in and log out of his or her account.
-- [x] The current signed in user is persisted across app restarts.
-- [x] User can take a photo, add a caption, and post it to "Instagram".
-- [x] UI/theme are personalized 
+* Search
+   * User can search for locations to see stats
+* Stats Stream 
+   * User can view list of stats for relevant locations
+* Detail 
+   * User can view more stats from a specific location
+* Login 
+   * User can login to access Covid Journal
+* Journal Stream
+   * User can view all the Journal entries they have made
+* Entry Creation 
+   * User can edit text or add audio to post a journal entry
 
 
-The following **optional** features are implemented:
+### 3. Navigation
 
-- [ ] User sees app icon in home screen and styled bottom navigation view
-- [ ] Style the feed to look like the real Instagram feed.
-- [X] After the user submits a new post, show an indeterminate progress bar while the post is being uploaded to Parse.
+**Tab Navigation** (Tab to Screen)
 
-The following **additional** features are implemented:
+* Location Stats
+* COVID-19 Journal
+* Logout 
 
-- [x] Started a very simple FeedActivity to show the most recent saved Post
+**Flow Navigation** (Screen to Screen)
 
-## Video Walkthrough
+* Login
+   * => Location Stream
+* Location Stats Stream
+   * => Location Search
+       * => Location Stats Stream
+           * => Location Detail
+* COVID-19 Journal Stream
+   * => Entry Creation
 
-Here's a walkthrough of implemented user stories:
+## Wireframes
+### [BONUS] Digital Wireframes & Mockups
+<img src="images/wireframes.png" width=600>
+<img src="images/Wireframe.jpg" width=150>
+<img src="images/wirframe_login.jpg" width=150>
+### [BONUS] Interactive Prototype
 
-<img src='walkthrough_insta.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+| property     | Type            | Description                                     |
+|--------------|-----------------|-------------------------------------------------|
+| objectId     | String          | Unique id for the user login                    |
+| image        | File            |    Images of   covid cities/statistics          |
+| createdAt    | DateTime        | date when covid post is created (default field) |
+| updatedAt    | DateTime        | date when covid post is updated (default field) |
+| journalEntry | String          | Entry by author                                 |
+| author       | Pointer to User | entry author                                    |
+| statistics   | String          | Statistics for each city                        |
+### Networking
+* Login Screen
+    * (Create/POST) Sign up and create a new user
+        ```swift
+        ParseObject newUser = new    ParseObject("User");
+        newUser.put("username", "Bob");
+        newUser.put("password", "Day 5");
+        newUser.saveInBackground();
+        ```
+* Location Stats Screen
+    * (Read/GET) Display COVID-19 Stats 
+        ```swift
+             let query = PFQuery(className:"Stats")
+             query.whereKey("locations", equalTo: states)
+             query.order(byDescending: "createdAt")
+             query.findObjectsInBackground { (entries: [PFObject]?, error: Error?) in
+                if let error = error { 
+                   print(error.localizedDescription)
+                } else if let stats = stats {
+                   print("Successfully retrieved \(posts.count) posts.")
+               // TODO: Do something with stats for specific locations...
+                }
+             }
+* Journal Stream Screen
+    * (Read/GET) Displays all the previous entries that have been made from the logged in user
+        ```swift
+             let query = PFQuery(className:"Entry")
+             query.whereKey("author", equalTo: currentUser)
+             query.order(byDescending: "createdAt")
+             query.findObjectsInBackground { (entries: [PFObject]?, error: Error?) in
+                if let error = error { 
+                   print(error.localizedDescription)
+                } else if let entries = entries {
+                   print("Successfully retrieved \(posts.count) posts.")
+               // TODO: Do something with entries...
+                }
+             }
+             ```
+    * (Delete) Remove existing entry
+        ```swift
+            jEntry.remove("playerName");
+            jEntry.saveInBackground();
+        ```
+* Entry Creation
+    * (Create/POST) Create a new entry to add to the stream 
+        ```swift
+        ParseObject jEntry = new ParseObject("JournalEntry");
+        jEntry.put("date", 1337);
+        jEntry.put("title", "Day 5");
+        jEntry.put("text", content);
+        jEntry.saveInBackground();
+        ```
+Base URL: https://api.covidtracking.com
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-## Notes
-
-Describe any challenges encountered while building the app.
-
-## Open-source libraries used
-
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
-
-## License
-
-    Copyright [2020] [Barrett]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+| HTTP Verb | Endpoint | Description |
+| -------- | -------- | -------- |
+| GET    | /v1/us/current.json | Current COVID-19 Statistics for the US as a whole     |
+| GET    | /v1/states/current.json | Current COVID-19 Statistics for all US states     |
+| GET    | /v1/states/?state=state/current.json | Current COVID-19 Statistics for a specific state     |
+| GET    | /v1/states/?state=state/info.json | Information about a specific state's response resources     |
