@@ -164,3 +164,8 @@ Base URL: https://api.covidtracking.com
 | GET    | /v1/states/current.json | Current COVID-19 Statistics for all US states     |
 | GET    | /v1/states/?state=state/current.json | Current COVID-19 Statistics for a specific state     |
 | GET    | /v1/states/?state=state/info.json | Information about a specific state's response resources     |
+
+# Weekly Walkthroughs
+## Week 1 Walkthrough
+<img src="walkthrough_covid19_stats.gif" width=150>
+
