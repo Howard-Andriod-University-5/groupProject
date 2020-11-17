@@ -37,17 +37,17 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 
 **Required Must-have Stories**
 
-[] User can view COVID-19 death and infection rates in the United States
-[] User can view COVID-19 death and infection rates by state in the United States
-[] User can view updated safety information
-[x] User can login and create written and photo entries in a personal COVID Journal
+-[ ] User can view COVID-19 death and infection rates in the United States
+-[ ] User can view COVID-19 death and infection rates by state in the United States
+-[ ] User can view updated safety information
+-[x] User can login and create written and photo entries in a personal COVID Journal
 
 **Optional Nice-to-have Stories**
 
-[] User can use their location to automatically view relevant COVID-19 stats
-[] User can get relevant information about testing centers near them (directions, phone number, website, etc.)
-[] User can download Journal in a pdf file to print or share
-[] User can save locations that they are interested in
+-[ ] User can use their location to automatically view relevant COVID-19 stats
+-[ ] User can get relevant information about testing centers near them (directions, phone number, website, etc.)
+-[ ] User can download Journal in a pdf file to print or share
+-[ ] User can save locations that they are interested in
 
 ### 2. Screen Archetypes
 
