@@ -9,6 +9,12 @@
     android:backgroundTint="#B9DFFAE5">
 
     <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="05-07-2020" />
+
+    <TextView
         android:id="@+id/tvUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

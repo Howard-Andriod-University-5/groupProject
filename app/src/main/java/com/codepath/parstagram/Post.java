@@ -35,4 +35,12 @@ public class Post extends ParseObject {
     public void setKeyUser(ParseUser parseUser) {
         put(KEY_USER, parseUser);
     }
+
+    public ParseUser getKeyCreatedAt() {
+        return getParseUser(KEY_CREATED_AT);
+    }
+
+    /**public void setKeyCreatedAt(ParseDate parseDate) {
+        put(KEY_CREATED_AT, parseDate);
+    }*/
 }
