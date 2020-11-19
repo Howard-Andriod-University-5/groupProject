@@ -1,8 +1,8 @@
-package com.codepath.parstagram.Fragments;
+package com.codepath.covid19stats.Fragments;
 
 import android.util.Log;
 
-import com.codepath.parstagram.Post;
+import com.codepath.covid19stats.Post;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;

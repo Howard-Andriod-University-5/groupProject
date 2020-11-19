@@ -1,4 +1,4 @@
-package com.codepath.parstagram.Fragments;
+package com.codepath.covid19stats.Fragments;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,8 +23,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.codepath.parstagram.Post;
-import com.codepath.parstagram.R;
+import com.codepath.covid19stats.Post;
+import com.codepath.covid19stats.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;

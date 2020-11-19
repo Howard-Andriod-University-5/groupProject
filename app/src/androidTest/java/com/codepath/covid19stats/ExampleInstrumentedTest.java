@@ -1,4 +1,4 @@
-package com.codepath.parstagram;
+package com.codepath.covid19stats;
 
 import android.content.Context;
 
