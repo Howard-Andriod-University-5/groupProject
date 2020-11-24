@@ -1,4 +1,4 @@
-package com.codepath.covid19stats;
+package com.codepath.parstagram;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -71,7 +71,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
         public void bind(Post post) {
             tvCaption.setText(post.getKeyDescription());
-            //tvDate.setText(post.getKeyCreatedAt());
+            tvDate.setText(post.getCreatedString());
             tvUsername.setText(post.getKeyUser().getUsername());
             ParseFile image = post.getKeyImage();
             if (image != null) {

@@ -1,4 +1,4 @@
-package com.codepath.covid19stats;
+package com.codepath.parstagram;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.codepath.covid19stats.Fragments.ComposeFragment;
-import com.codepath.covid19stats.Fragments.PostsFragment;
-import com.codepath.covid19stats.Fragments.ProfileFragment;
+import com.codepath.parstagram.Fragments.ComposeFragment;
+import com.codepath.parstagram.Fragments.PostsFragment;
+import com.codepath.parstagram.Fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 

@@ -1,4 +1,4 @@
-package com.codepath.covid19stats;
+package com.codepath.parstagram;
 
 import androidx.appcompat.app.AppCompatActivity;
 

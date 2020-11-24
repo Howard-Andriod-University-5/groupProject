@@ -1,4 +1,4 @@
-package com.codepath.covid19stats;
+package com.codepath.parstagram;
 
 import android.app.Application;
 
@@ -14,8 +14,8 @@ public class ParseApplication extends Application {
         ParseObject.registerSubclass(Post.class);
 
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("KGoqwIyxL6QmXTilnlhrgpODc8EowNc3nOtKqThY")
-                .clientKey("ztamahbSxQnRWYW93HsFnDQzKsM2Swga4Sx0RKDO")
+                .applicationId("6zBLmDbqgIMp3uf4m3CtOZ2VIQ9mp9ij73xCBh3W")
+                .clientKey("dXaWJetaiONCWltBIdmz8K24kfiMMZ8B9RHwJRKW")
                 .server("https://parseapi.back4app.com")
                 .build()
         );

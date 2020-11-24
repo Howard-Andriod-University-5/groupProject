@@ -1,4 +1,4 @@
-package com.codepath.covid19stats.Fragments;
+package com.codepath.parstagram.Fragments;
 
 import android.os.Bundle;
 
@@ -14,9 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.codepath.covid19stats.Post;
-import com.codepath.covid19stats.PostsAdapter;
-import com.codepath.covid19stats.R;
+import com.codepath.parstagram.Post;
+import com.codepath.parstagram.PostsAdapter;
+import com.codepath.parstagram.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
