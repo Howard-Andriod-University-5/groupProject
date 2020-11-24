@@ -40,7 +40,8 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 - [ ] User can view COVID-19 death and infection rates in the United States
 - [ ] User can view COVID-19 death and infection rates by state in the United States
 - [ ] User can view updated safety information
-- [x] User can login and create written and photo entries in a personal COVID Journal
+- [x] User can login 
+- [x] User can create written and photo entries in a personal COVID Journal
 
 **Optional Nice-to-have Stories**
 
@@ -168,4 +169,6 @@ Base URL: https://api.covidtracking.com
 # Weekly Walkthroughs
 ## Week 1 Walkthrough
 <img src="walkthrough_covid19_stats.gif" width=150>
+## Week 2 Walkthrough
+<img src="walkthrough_covid19_stats(1).gif" width=150>
 
