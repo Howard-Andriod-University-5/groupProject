@@ -56,4 +56,18 @@
         android:textColor="#8F745C"
         android:textSize="20sp" />
 
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#FFFAE3"
+        android:text="SIGN UP"
+        android:textColor="#8F745C"
+        android:textSize="20sp"
+        android:onClick="btn_signupFrom"/>
+
 </LinearLayout>

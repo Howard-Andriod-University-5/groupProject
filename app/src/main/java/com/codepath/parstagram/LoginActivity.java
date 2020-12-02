@@ -67,4 +67,9 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+    public void btn_signupFrom(View view) {
+        startActivity(new Intent(getApplicationContext(), Signup_Form.class ));
+
+    }
 }
