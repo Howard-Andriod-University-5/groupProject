@@ -49,6 +49,7 @@ This mobile app provides up-to-date information about the COVID-19 pandemic usin
 - [ ] User can get relevant information about testing centers near them (directions, phone number, website, etc.)
 - [ ] User can download Journal in a pdf file to print or share
 - [ ] User can save locations that they are interested in
+- [x] User can sign up 
 
 ### 2. Screen Archetypes
 
