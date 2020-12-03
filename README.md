@@ -174,5 +174,6 @@ Base URL: https://api.covidtracking.com
 <img src="walkthrough_covid19_stats(1).gif" width=150>
 ## Week 3 Walkthrough 
 <img src="https://i.imgur.com/DUIPj5f.gif" width=200>
+<img src="walkthrough_covid19_stats(2).gif" width=150>
 
 
