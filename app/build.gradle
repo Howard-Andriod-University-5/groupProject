@@ -9,7 +9,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
-        applicationId "com.codepath.covid19stats"
+        applicationId "com.codepath.parstagram"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

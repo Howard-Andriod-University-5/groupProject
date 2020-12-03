@@ -31,6 +31,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
+import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -41,7 +42,7 @@ import static android.app.Activity.RESULT_OK;
  */
 public class ComposeFragment extends Fragment {
     public static final String TAG = "ComposeFragment";
-    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 22;
+    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 23;
     private EditText etCaption;
     private Button btnPicture;
     private ImageView ivPhoto;
@@ -103,7 +104,7 @@ public class ComposeFragment extends Fragment {
         // wrap File object into a content provider
         // required for API >= 24
         // See https://guides.codepath.com/android/Sharing-Content-with-Intents#sharing-files-with-api-24-or-higher
-        Uri fileProvider = FileProvider.getUriForFile(getContext(), "com.codepath.fileprovider", photoFile);
+        Uri fileProvider = FileProvider.getUriForFile(Objects.requireNonNull(getContext()), "com.codepath.fileprovider.parstagram", photoFile);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
 
         // If you call startActivityForResult() using an intent that no app can handle, your app will crash.
