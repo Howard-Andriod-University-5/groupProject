@@ -41,7 +41,7 @@ import static android.app.Activity.RESULT_OK;
  */
 public class ComposeFragment extends Fragment {
     public static final String TAG = "ComposeFragment";
-    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 23;
+    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 22;
     private EditText etCaption;
     private Button btnPicture;
     private ImageView ivPhoto;
